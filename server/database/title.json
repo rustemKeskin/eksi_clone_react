@@ -1,0 +1,6 @@
+{
+  "id": "int",
+  "title": "string",
+  "created_at": "date",
+  "user_id": "int"
+}

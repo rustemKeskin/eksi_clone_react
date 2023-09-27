@@ -1,0 +1,998 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "EksiCloneFullStack api Routes",
+    "dateExported": "2023-09-15T17:13:44.419Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "titles",
+            "containerId": "",
+            "created": "2023-08-24T21:52:55.342Z",
+            "sortNum": 10000,
+            "settings": {
+                "runOptions": {
+                    "delay": 20,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        },
+        {
+            "_id": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "users",
+            "containerId": "",
+            "created": "2023-08-24T21:54:50.386Z",
+            "sortNum": 30000,
+            "settings": {
+                "runOptions": {
+                    "delay": 60,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        },
+        {
+            "_id": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "entries",
+            "containerId": "",
+            "created": "2023-08-25T03:31:42.409Z",
+            "sortNum": 31250,
+            "settings": {
+                "runOptions": {
+                    "delay": 50,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        },
+        {
+            "_id": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "mongo titles ",
+            "containerId": "",
+            "created": "2023-08-27T21:36:02.520Z",
+            "sortNum": 31875,
+            "settings": {
+                "runOptions": {
+                    "delay": 1000,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        },
+        {
+            "_id": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "mongo users",
+            "containerId": "",
+            "created": "2023-08-27T21:36:16.506Z",
+            "sortNum": 32500,
+            "settings": {
+                "runOptions": {
+                    "delay": 60,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        },
+        {
+            "_id": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "mongo entries",
+            "containerId": "",
+            "created": "2023-08-27T21:36:26.305Z",
+            "sortNum": 38125,
+            "settings": {
+                "runOptions": {
+                    "delay": 50,
+                    "iterations": 1,
+                    "stopOnFail": true,
+                    "dataFilePath": ""
+                }
+            }
+        }
+    ],
+    "requests": [
+        {
+            "_id": "389e7d03-2e81-4e17-b460-d660b5a820f9",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-08-27T21:05:12.852Z",
+            "modified": "2023-09-15T16:30:33.882Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "44d5698c-9e32-4006-95d0-3678e6d7a61f",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-08-27T21:36:02.521Z",
+            "modified": "2023-09-15T17:10:02.148Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0c26f53c-594b-4cac-86a5-7fa58183cbd0",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "get Titles",
+            "url": "http://localhost:3000/first_project/api/titles",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-24T19:52:23.075Z",
+            "modified": "2023-09-15T16:31:04.244Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ef6852c5-cc95-4b56-b0a6-839bba986c74",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "get Titles",
+            "url": "http://localhost:3000/first_project/api/titles",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-08-27T21:36:02.522Z",
+            "modified": "2023-09-15T17:10:07.174Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9cef853f-aad9-4b10-bf91-d218096368c7",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "get Specific Title by name",
+            "url": "http://localhost:3000/first_project/api/titles/Optimization Techniques/name",
+            "method": "GET",
+            "sortNum": 15625,
+            "created": "2023-08-24T20:02:06.220Z",
+            "modified": "2023-09-15T16:31:14.033Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "29bf8fe8-cefa-412a-941d-573a0c589212",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "get Specific Title by name",
+            "url": "http://localhost:3000/first_project/api/titles/Optimization Techniques/name",
+            "method": "GET",
+            "sortNum": 15625,
+            "created": "2023-08-27T21:36:02.523Z",
+            "modified": "2023-09-15T17:10:13.059Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "da576baf-9a82-4241-a43a-3f9ecf90910c",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 17500,
+            "created": "2023-08-27T21:27:58.120Z",
+            "modified": "2023-09-15T16:32:58.537Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a2f26ba-fbbd-4627-aa83-021bca75286b",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 17500,
+            "created": "2023-08-27T21:36:16.509Z",
+            "modified": "2023-09-15T17:11:39.458Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "00fd7db0-6548-4321-83b0-907b9002dc17",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "get Specific Title's entries",
+            "url": "http://localhost:3000/first_project/api/titles/15/entries",
+            "method": "GET",
+            "sortNum": 21250,
+            "created": "2023-08-25T14:33:26.066Z",
+            "modified": "2023-09-15T16:31:22.423Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e7cc7a0c-70ae-45d2-ad85-b113b3bfd770",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "get Specific Title's entries",
+            "url": "http://localhost:3000/first_project/api/titles/64eb8c28437556e48d8b76c4/entries",
+            "method": "GET",
+            "sortNum": 21250,
+            "created": "2023-08-27T21:36:02.524Z",
+            "modified": "2023-09-15T17:10:21.821Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3257f527-48e3-45bd-ba0b-40facf715128",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "get Specific Title by id",
+            "url": "http://localhost:3000/first_project/api/titles/13/id",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-08-24T23:14:15.032Z",
+            "modified": "2023-09-15T16:31:37.722Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "03a96866-a1b2-484e-95cc-41a67f8b8eb4",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "get Specific Title by id",
+            "url": "http://localhost:3000/first_project/api/titles/64eb8c28437556e48d8b76c4/id",
+            "method": "GET",
+            "sortNum": 22500,
+            "created": "2023-08-27T21:36:02.525Z",
+            "modified": "2023-09-15T17:10:27.971Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ed01e506-3950-43c8-80c7-3611db39dd35",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "get title id",
+            "url": "http://localhost:3000/first_project/api/titles/find-id?titleName=Web Scraping with JavaScript",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-08-24T22:53:00.752Z",
+            "modified": "2023-09-15T16:31:46.115Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "titleName",
+                    "value": "Web Scraping with JavaScript",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b262481c-9775-46b4-a985-550567e423e0",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "get title id",
+            "url": "http://localhost:3000/first_project/api/titles/find-id?titleName=Web Scraping with JavaScript",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-08-27T21:36:02.526Z",
+            "modified": "2023-09-15T17:10:35.348Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "titleName",
+                    "value": "Web Scraping with JavaScript",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "bd69fbbf-0730-48c9-9b19-0be1a2a463ef",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "edit title1",
+            "url": "http://localhost:3000/first_project/api/titles/Closures in JavaScript",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-08-24T15:46:40.130Z",
+            "modified": "2023-09-15T16:31:59.362Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\":\"deneme\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2192ac9b-c68b-43bb-9ceb-bdfed7b15dcb",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "edit title1",
+            "url": "http://localhost:3000/first_project/api/titles/Closures in JavaScript",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2023-08-27T21:36:02.527Z",
+            "modified": "2023-09-15T17:10:44.520Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\":\"deneme\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "91faed8f-c837-4314-ab65-1e5109f9d0c3",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "get user info by name",
+            "url": "http://localhost:3000/first_project/api/users/John Doe/name",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-08-24T23:40:03.207Z",
+            "modified": "2023-09-15T16:33:15.575Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "958e043c-e0b7-4160-a214-b347249eff2b",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "get user info by name",
+            "url": "http://localhost:3000/first_project/api/users/John Doe/name",
+            "method": "GET",
+            "sortNum": 35000,
+            "created": "2023-08-27T21:36:16.510Z",
+            "modified": "2023-09-15T17:11:43.640Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b58b6a8b-0a03-4923-bab5-024c815df5a1",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "edit title 2",
+            "url": "http://localhost:3000/first_project/api/titles/deneme",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-08-24T15:48:15.351Z",
+            "modified": "2023-09-15T16:32:09.449Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\":\"Closures in JavaScript\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cf4f1e49-c668-473b-81f0-db147b0ec993",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "edit title 2",
+            "url": "http://localhost:3000/first_project/api/titles/deneme",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2023-08-27T21:36:02.528Z",
+            "modified": "2023-09-15T17:10:53.430Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\":\"Closures in JavaScript\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ac3d88b3-4523-4c86-b767-cc5aa93a1510",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "Create Title Copy",
+            "url": "http://localhost:3000/first_project/api/titles",
+            "method": "POST",
+            "sortNum": 43750,
+            "created": "2023-08-27T20:41:01.941Z",
+            "modified": "2023-09-15T16:32:16.175Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\": \"deneme2\", \"userId\":\"1\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6ca24197-46c6-4e1b-84f7-7d4df63d2d57",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "Create Title Copy",
+            "url": "http://localhost:3000/first_project/api/titles",
+            "method": "POST",
+            "sortNum": 43750,
+            "created": "2023-08-27T21:36:02.529Z",
+            "modified": "2023-09-15T17:10:58.895Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newTitle\": \"deneme2\", \"userId\":\"64eb855820cb38855bd668c6\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9bacb0f2-c985-4480-a31b-8e4de5b3faea",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "fec876df-6881-48d7-bbb9-f368f8ddbf96",
+            "name": "Delete Title",
+            "url": "http://localhost:3000/first_project/api/titles/deneme2",
+            "method": "DELETE",
+            "sortNum": 45000,
+            "created": "2023-08-24T20:14:38.723Z",
+            "modified": "2023-09-15T16:32:25.627Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b04d1fb9-f9a6-4c0d-b809-35ba1c96e3ff",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "6640bc01-5900-4e34-a76b-e2303a4e9737",
+            "name": "Delete Title",
+            "url": "http://localhost:3000/first_project/api/titles/deneme2",
+            "method": "DELETE",
+            "sortNum": 45000,
+            "created": "2023-08-27T21:36:02.530Z",
+            "modified": "2023-09-15T17:11:04.028Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "54a7d6c2-8dc1-47c8-a4b8-b392d0890134",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-08-27T21:35:03.076Z",
+            "modified": "2023-09-15T16:51:49.328Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "34c011c6-60d5-4401-946e-adf802c41bb3",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "login Copy",
+            "url": "http://localhost:3000/first_project/api/users/login",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-08-27T21:36:26.305Z",
+            "modified": "2023-09-15T17:12:48.552Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"name\" : \"John Doe\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7bdc9dbc-6cba-4ac9-8fa8-f90e9e0d4f18",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "get user info by id",
+            "url": "http://localhost:3000/first_project/api/users/1/id",
+            "method": "GET",
+            "sortNum": 52500,
+            "created": "2023-08-24T23:53:06.780Z",
+            "modified": "2023-09-15T16:33:21.574Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6dcadbcc-11b2-4c6d-ab10-45db11a88480",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "get user info by id",
+            "url": "http://localhost:3000/first_project/api/users/64eb855820cb38855bd668c8/id",
+            "method": "GET",
+            "sortNum": 52500,
+            "created": "2023-08-27T21:36:16.511Z",
+            "modified": "2023-09-15T17:11:50.526Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b6ac84f3-3cbb-4b33-a76f-8e6cb782aa00",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "getUserTitles",
+            "url": "http://localhost:3000/first_project/api/users/my_titles",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-08-24T21:57:38.144Z",
+            "modified": "2023-09-15T16:33:28.680Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f69a1aa2-02eb-411d-9859-801597831d8d",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "getUserTitles",
+            "url": "http://localhost:3000/first_project/api/users/my_titles",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-08-27T21:36:16.512Z",
+            "modified": "2023-09-15T17:11:55.709Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "747bbca2-5820-4687-b708-362545647bf2",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "Create Entry",
+            "url": "http://localhost:3000/first_project/api/entries",
+            "method": "POST",
+            "sortNum": 75000,
+            "created": "2023-08-27T21:36:26.307Z",
+            "modified": "2023-09-15T17:12:52.650Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"content\":\"this is create entry content\", \"userId\":\"64eb855820cb38855bd668c8\", \"titleId\":\"64eb8c28437556e48d8b76c8\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3f406170-4daf-49d7-bbf6-738ed9eff713",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "getUsernames",
+            "url": "http://localhost:3000/first_project/api/usernames",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-24T23:37:07.736Z",
+            "modified": "2023-09-15T16:33:35.448Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c5500bbd-1203-46fd-bcc8-9a05776c8464",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "Create User",
+            "url": "http://localhost:3000/first_project/api/users",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-08-25T00:45:26.687Z",
+            "modified": "2023-09-15T16:33:43.162Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"username\":\"new user\", \"email\":\"newUser@gmail.com\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2490d503-c642-4921-b290-ff9367341d2f",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "getUsernames",
+            "url": "http://localhost:3000/first_project/api/usernames",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-08-27T21:36:16.513Z",
+            "modified": "2023-09-15T17:12:01.400Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "31480131-41ff-45f4-aefe-6bdce248c939",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "Create User",
+            "url": "http://localhost:3000/first_project/api/users",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2023-08-27T21:36:16.514Z",
+            "modified": "2023-09-15T17:12:10.819Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"username\":\"new user\", \"email\":\"newUser@gmail.com\", \"password\": \"123abc\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "242c6878-17bd-4c51-827a-eb4e5a1a1499",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "edit password",
+            "url": "http://localhost:3000/first_project/api/users/new user/password",
+            "method": "PATCH",
+            "sortNum": 85000,
+            "created": "2023-08-25T02:16:08.564Z",
+            "modified": "2023-09-15T16:33:49.258Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newPassword\":\"abc123\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d24c157-e3bb-4532-a499-68786705b798",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "edit password",
+            "url": "http://localhost:3000/first_project/api/users/new user/password",
+            "method": "PATCH",
+            "sortNum": 85000,
+            "created": "2023-08-27T21:36:16.515Z",
+            "modified": "2023-09-15T17:12:15.544Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newPassword\":\"abc123\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a79f5b48-10a5-4015-98d4-e8223ca83856",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "getEmails",
+            "url": "http://localhost:3000/first_project/api/emails",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-08-24T23:38:12.152Z",
+            "modified": "2023-09-15T16:33:57.806Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ce701844-d9ae-4849-b724-88e629b48635",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "getEmails",
+            "url": "http://localhost:3000/first_project/api/emails",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-08-27T21:36:16.516Z",
+            "modified": "2023-09-15T17:12:19.952Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "799c41bc-5f18-4cac-836b-031c49bf06ed",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "get specific entry info by id",
+            "url": "http://localhost:3000/first_project/api/entries/1",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-08-25T03:48:01.225Z",
+            "modified": "2023-09-15T16:51:47.336Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "24febc76-be1b-460a-abf6-2f4c85ea24a6",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "get specific entry info by id",
+            "url": "http://localhost:3000/first_project/api/entries/64ebfafc13f7996834c2b523",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-08-27T21:36:26.306Z",
+            "modified": "2023-09-15T17:12:57.120Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "53df17cf-e551-467c-a6f3-26cef29cae04",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "edit user name1",
+            "url": "http://localhost:3000/first_project/api/users/John Doe/name",
+            "method": "PATCH",
+            "sortNum": 107500,
+            "created": "2023-08-25T00:23:01.420Z",
+            "modified": "2023-09-15T16:34:05.910Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newName\":\"newName\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9dda4b70-43ae-4cf6-baf6-75dae8e6db73",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "edit user name1",
+            "url": "http://localhost:3000/first_project/api/users/John Doe/name",
+            "method": "PATCH",
+            "sortNum": 107500,
+            "created": "2023-08-27T21:36:16.517Z",
+            "modified": "2023-09-15T17:12:25.738Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newName\":\"newName\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5310e7f0-0527-41d9-b9d3-7bf3306047ef",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "edit user email",
+            "url": "http://localhost:3000/first_project/api/users/newName/email",
+            "method": "PATCH",
+            "sortNum": 108125,
+            "created": "2023-08-25T03:08:09.634Z",
+            "modified": "2023-09-15T16:34:13.258Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"emailEdit@gmail.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1c4c2fb4-0ac6-43b5-bf0e-ff9ced926984",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "edit user email",
+            "url": "http://localhost:3000/first_project/api/users/newName/email",
+            "method": "PATCH",
+            "sortNum": 108125,
+            "created": "2023-08-27T21:36:16.518Z",
+            "modified": "2023-09-15T17:12:31.829Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"email\":\"emailEdit@gmail.com\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a367a589-e7e2-40b1-84e6-ba86059610ce",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "edit user name2",
+            "url": "http://localhost:3000/first_project/api/users/newName/name",
+            "method": "PATCH",
+            "sortNum": 108750,
+            "created": "2023-08-25T00:30:31.231Z",
+            "modified": "2023-09-15T16:34:21.513Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newName\":\"John Doe\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ca19e682-a209-4330-bdbb-497acfe38b3f",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "edit user name2",
+            "url": "http://localhost:3000/first_project/api/users/newName/name",
+            "method": "PATCH",
+            "sortNum": 108750,
+            "created": "2023-08-27T21:36:16.519Z",
+            "modified": "2023-09-15T17:12:35.378Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newName\":\"John Doe\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "846ce7d0-025e-480e-8ed5-7d323a968eed",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "Create Entry",
+            "url": "http://localhost:3000/first_project/api/entries",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2023-08-25T05:13:43.977Z",
+            "modified": "2023-09-15T17:07:39.944Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"new_entry\":\"this is create entry content\", \"userId\":\"1\", \"titleId\":\"1\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c7ebd6c2-7dad-4ebf-ba8e-f83088ffdac0",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "edit entry",
+            "url": "http://localhost:3000/first_project/api/entries/10",
+            "method": "PATCH",
+            "sortNum": 115000,
+            "created": "2023-08-25T06:04:43.295Z",
+            "modified": "2023-09-15T16:52:13.128Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newContent\":\"new edit entry content\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1660d66d-3c3a-4575-ad3e-9fbc7b4b4cfc",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "edit entry",
+            "url": "http://localhost:3000/first_project/api/entries/64ebfafc13f7996834c2b523",
+            "method": "PATCH",
+            "sortNum": 115000,
+            "created": "2023-08-27T21:36:26.309Z",
+            "modified": "2023-09-15T17:13:01.950Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"newContent\":\"new edit entry content\"}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "aaf7ecfd-21a5-4afe-854a-c27b05d95ec5",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "f527f521-cc34-4ec9-b3cc-68eb9b7ca8ca",
+            "name": "delete User",
+            "url": "http://localhost:3000/first_project/api/users/new user",
+            "method": "DELETE",
+            "sortNum": 118750,
+            "created": "2023-08-25T01:23:04.940Z",
+            "modified": "2023-09-15T16:34:29.149Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6eb63cf5-ac7a-4e2f-af8f-5f25a02d8a2f",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "924dfbc2-2d32-4fa9-b7dd-3e0245ec00b8",
+            "name": "delete User",
+            "url": "http://localhost:3000/first_project/api/users/new user",
+            "method": "DELETE",
+            "sortNum": 118750,
+            "created": "2023-08-27T21:36:16.520Z",
+            "modified": "2023-09-15T17:12:40.408Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6dd57dbc-fcc1-4cea-ab6b-0587f57a3965",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "b2e2b795-1e5f-4984-8b06-0fad33837e54",
+            "name": "Delete Entry",
+            "url": "http://localhost:3000/first_project/api/entries/203",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-08-25T05:42:56.175Z",
+            "modified": "2023-09-15T16:52:17.874Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "58949e0a-c058-48da-82f5-fdf1e10ea84b",
+            "colId": "b7e5f5ca-a98a-47b4-a185-02d83ff9fee7",
+            "containerId": "353bfe2d-06f3-49d5-9c6b-64bc684c77bf",
+            "name": "Delete Entry",
+            "url": "http://localhost:3000/first_project/api/entries/64ebfafc13f7996834c2b523",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-08-27T21:36:26.310Z",
+            "modified": "2023-09-15T17:13:07.432Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
