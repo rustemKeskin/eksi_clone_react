@@ -277,22 +277,21 @@ import {
   
     let result = await store.getEntry(entryId);
   
-    result ? res.json(result).send()
-    : res.status(404).json({messeage : 'invalid title id'}).send()
+    result ? res.json(result): res.status(404).json({messeage : 'invalid title id'})
   })
   // edit entry
   firstApiRouter.patch('/entries/:entry_id', authenticated, async(req, res) => {
 
     let text = req.body.newContent
     let result = await res.locals.store.editEntry(req.params.entry_id, text)
-    result ? res.status(204).send() : res.status(400).send();
+    result ? res.sendStatus(204) : res.sendStatus(400);
   })
   // delete entry
   firstApiRouter.delete('/entries/:entry_id', authenticated, async(req, res) => {
 
     //  validate entry_id
     let result = res.locals.store.deleteEntry(req.params.entry_id);
-    result ? res.status(204).send() : res.status(400).send();
+    result ? res.sendStatus(204) : res.sendStatus(400);
   })
   // create entry
   firstApiRouter.post('/entries', authenticated, 

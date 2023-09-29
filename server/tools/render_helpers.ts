@@ -1,5 +1,4 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
-import { QueryResult } from 'pg';
 
 async function checkLogin(req:Request, res:Response, next:NextFunction) {
 

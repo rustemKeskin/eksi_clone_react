@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const {User,db1} = require('./user');
+const { User, db1 } = require('./user');
 const uniqueValidator = require('mongoose-unique-validator')
 
 const titleSchema = new mongoose.Schema({

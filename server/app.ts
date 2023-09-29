@@ -32,7 +32,7 @@ app.use(session({
   cookie : {
     httpOnly : true,
     maxAge : 24 * 60 * 60 * 1000, // one day
-    secure : false,
+    secure : true,
     path : '/'
   },
   name : 'eksiClone-session-id',
@@ -63,7 +63,6 @@ app.use(async(_req, res, next ) => {
 
 
 app.get('/favicon.ico', (req : Request, res : Response) => {
-  console.log('here favicon ico')
   res.status(301)
 })
 
