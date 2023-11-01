@@ -10,12 +10,10 @@
     "skipLibCheck": true,
     "lib": ["ES6", "DOM"],
     "types": ["node"],
-    // "allowJs": true
   },
   "include": [
     "server/**/*.ts",
     "server/**/*.js",
-    "server/views/**/*.pug"
   ],
   "exclude": ["node_modules","./build"]
 }

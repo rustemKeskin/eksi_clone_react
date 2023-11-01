@@ -1,85 +1,127 @@
 import axios from 'axios'
 
-const first_project = axios.create({
-  baseURL: 'http://localhost:3000/first_project/api', 
+const eksi = axios.create({
+  baseURL: 'http://localhost:3000/api', 
 });
 
-const getTitles = () => {
-  return first_project.get('/titles')
+function getTitles() {
+  return eksi.get('/titles');
 }
 
 const deleteTitle = (title) => {
-  return first_project.delete(`/titles/${title}`)
+  return eksi.delete(`/titles/${title}`)
 }
 
 const login = (credentials) => {
-  return first_project.post(`/users/login`, credentials)
+  return eksi.post(`/users/login`, credentials)
 }
 
 const getTitleByName = (title) => {
-  return first_project.get(`/titles/${title}/name`)
+  return eksi.get(`/titles/${title}/name`)
 }
 
 const getTitleById = (id) => {
-  return first_project.get(`/titles/${id}/id`)
+  return eksi.get(`/titles/${id}/id`)
 }
 
 const getEntries = (title) => {
-  return first_project.get(`/titles/title_name/${title}/entries`)
+  return eksi.get(`/titles/title_name/${title}/entries`)
 }
 
 const getEntry = (id) => {
-  return first_project.get(`/entries/${id}`)
+  return eksi.get(`/entries/${id}`)
 }
 
 const createEntry = (entry) => {
-  return first_project.post('/entries', entry);
+  return eksi.post('/entries', entry);
 }
 
 const signOut = () => {
-  return first_project.post('/users/logout');
+  return eksi.post('/users/logout');
 }
 
 const deleteEntry = (entryId) => {
-  return first_project.delete(`/entries/${entryId}`)
+  return eksi.delete(`/entries/${entryId}`)
 }
 
 const editEntry = (entryId, entry) => {
-  return first_project.patch(`/entries/${entryId}`, entry)
+  return eksi.patch(`/entries/${entryId}`, entry)
 }
 
 const editTitle = (title_name, newTitle) => {
-  return first_project.patch(`/titles/${title_name}`, newTitle) // {newTitle : 'xxxx'}
+  return eksi.patch(`/titles/${title_name}`, newTitle)
 }
 
 const userEntries = (username) => {
-  return first_project.get(`/users/entries/${username}`)
+  return eksi.get(`/users/entries/${username}`)
 }
 
 const createTitle = (newTitle, userId) => {
-  return first_project.post('/titles', {newTitle, userId})
+  return eksi.post('/titles', {newTitle, userId})
 }
 
 const signUp = (credentials) => {
-  return first_project.post('/users', credentials)
+  return eksi.post('/users', credentials)
 }
 
+eksi.interceptors.request.use(
 
+  (request) => {
+
+    // Retrieve the JWT token from localStorage
+    const token = localStorage.getItem('jwtToken');
+
+    // If a token is available, add it to the request headers
+    if (token) { request.headers.Authorization = `Bearer ${token}`;  }
+
+    return request;
+  },
+  (error) => {  return Promise.reject(error);  }
+);
+
+// eksi.interceptors.response.use(
+
+//   (response) => {
+
+//     console.log('incoming response : ', response);
+    
+//     // if (response.data.message == "Logged out successfully") {
+//     //   localStorage.removeItem('jwtToken');
+//     // }
+    
+//     // return response;
+//   },
+//   (error) => {
+
+//     console.log('myError : ', error);
+//     // Handle errors, such as unauthorized access (401) or token expiration
+//     // if (error.response.status === 401) {
+
+//     //   console.log('error.response.status === 401');
+
+//     //   // Redirect the user to the login page or trigger a logout action
+//     //   // based on your application's logic
+//     // }
+    
+//     // Handle other error cases as needed
+//     // return Promise.reject(error);
+//   }
+// );
 
 export default {
   login,
   signUp,
   signOut,
   getEntry,
-  getTitleByName,
-  getTitleById,
   editTitle,
-  userEntries,
   getTitles,
   editEntry,
   getEntries,
   deleteTitle,
   createEntry,
   deleteEntry,
-  createTitle
+  createTitle,
+  userEntries,
+  getTitleById,
+  getTitleByName,
 }

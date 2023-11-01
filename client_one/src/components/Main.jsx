@@ -6,11 +6,11 @@ import TextArea from './TextArea';
 import Notification from './Notification';
 import Settings from './Settings';
 import Profile from './Profile'
-import Signup from './Signup';
 import { useSelector } from 'react-redux'
 import TitleButtons from './TitleButtons'
 import EditTitle from './EditTitle';
 import EditEntry from './EditEntry';
+import Register from './Signup';
 
 const Main = () => {
   
@@ -47,7 +47,7 @@ const Main = () => {
     } else if (user) {
       return <h3> HOME PAGE</h3>
     } else if (signup) {
-      return <Signup />
+      return <Register />
     } else {
       return <Signin />
     }

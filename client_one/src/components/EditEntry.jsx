@@ -7,6 +7,8 @@ const EditEntry = () => {
   const title = useSelector(state => state.sharedData.title);
   const entry = useSelector(state => state.sharedData.entry);
 
+  console.log('entry : ', entry);
+  
   return (
     <>
       <h3>{title.title}</h3>
@@ -14,7 +16,7 @@ const EditEntry = () => {
       <div className="entry" id="entry" data-entry-id={entry.id} key={entry.id}>
         <p>{entry.entry}</p>
         <p className='entryInfo'>{entry.user_name}</p>
-        <img src={`/first_project${entry.image_url}`} alt="" />
+        <img src={`${entry.image_url}`} alt="" />
       </div>
 
       <TextArea />

@@ -254,6 +254,116 @@ svg {
   display: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100vh; 
+  /* padding: 1rem 0.5rem; */
+}
+
+.App section {
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.App form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  /* padding-bottom: 1rem; */
+}
+
+.App input[type="text"] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.App input[type="password"] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.App button {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.App button:hover {
+  background-color: rgb(26, 88, 1);
+}
+
+.App textarea {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+}
+
+
+
+
 /*---Desktop-----*/
 @media only screen and (max-width: 1400px) and (min-width: 900px) {
   
@@ -383,5 +493,3 @@ svg {
     color : rgb(63, 168, 37);
   }
 }
-
-

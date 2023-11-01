@@ -8,6 +8,7 @@ const Profile = ({user}) => {
   const [obj, setObj] = useState({});
 
   useEffect(() => {
+
     apiService.userEntries(user.user_name)
       .then((res) => {
 

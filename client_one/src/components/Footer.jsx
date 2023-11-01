@@ -30,10 +30,10 @@ const Footer = () => {
     } else {
       return (
         <>
-          <a href="/first_project/api/users/signin">
+          <a href="/api/users/signin">
             <button>Sign In</button>
           </a>
-          <a href="/first_project/api/users/singup">
+          <a href="/api/users/singup">
           <button>Sign Up</button>
           </a>
         </>

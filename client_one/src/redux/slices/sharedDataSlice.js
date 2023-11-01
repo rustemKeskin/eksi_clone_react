@@ -5,16 +5,17 @@ import apiService from '../../services/eksiApi';
 const sharedDataSlice = createSlice({
   name: 'sharedData',
   initialState: {
+    role : '',
     title : {},
     user : null,
     entries : [],
     titleList : [],
+    currentPage : 1,
     entry: null,
     signUp : false,
     profile : false,
     settings : false,
     titleEdit : false,
-    currentPage : 1,
     notificationMessage : null,
   },
   reducers: {
@@ -63,13 +64,16 @@ const sharedDataSlice = createSlice({
     },
     formatTitle(state) {
       state.title = {};
+    },
+    setRole(state, action) {
+      state.role = action.payload
     }
-    // Add other reducers for shared data here
   },
 });
 
 export const {
   setUser,
+  setRole,
   setTitle,
   setEntry,
   setSignUp,
@@ -81,6 +85,7 @@ export const {
   setTitleList,
   setTitleEdit,
   setEntryEdit,
+  setAccessToken,
   setCurrentPage,
   setNotificationMessage,
 } = sharedDataSlice.actions;
@@ -90,7 +95,9 @@ export const initializeTitles = () => {
   return async (dispatch) => {
 
     apiService.getTitles()
-      .then((response) => dispatch(setTitleList(response.data)) )
+      .then((response) => {
+        dispatch(setTitleList(response.data)) 
+      })
       .catch((err) => console.error('Error fetching titles:', err));
 
     const storedUser = localStorage.getItem('user');

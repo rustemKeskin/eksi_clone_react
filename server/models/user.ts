@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-const configTS = require('../config/config');
+const {FIRST_MONGODB_URI} = require('../config/config');
 import { IUser } from '../ts/interfaces/interfaces'
 const uniqueValidator = require('mongoose-unique-validator')
 
 // initial Mongoose connection atlas
-const initialConnection = mongoose.createConnection(configTS.FIRST_MONGODB_URI, {
+const initialConnection = mongoose.createConnection(FIRST_MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

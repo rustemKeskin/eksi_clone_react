@@ -66,7 +66,6 @@ const Header = () => {
   function handleSignIn(event) {
 
     event.preventDefault();
-    console.log('here');
     dispatch(setSignUp(false));
   }
 
@@ -75,7 +74,6 @@ const Header = () => {
     event.preventDefault();
     apiService.signOut();
     dispatch(setUser(null));
-    localStorage.removeItem('user');
   }
 
   function links(user) {

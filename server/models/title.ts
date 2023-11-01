@@ -1,3 +1,4 @@
+//  title.ts file
 import mongoose from "mongoose";
 const { User, db1 } = require('./user');
 const uniqueValidator = require('mongoose-unique-validator')
@@ -10,7 +11,7 @@ const titleSchema = new mongoose.Schema({
     unique : true
   },
   user_id : {
-    type : mongoose.Schema.Types.ObjectId,
+    type : String,
     ref : User,
     required : true
   }

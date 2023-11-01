@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
-import { setUser, setNotificationMessage } from '../redux/slices/sharedDataSlice';
+import { setUser, setNotificationMessage} from '../redux/slices/sharedDataSlice';
 import apiService from '../services/eksiApi';
 import Description from './Description'
 
@@ -20,14 +20,12 @@ const Signin = () => {
 
         if (response.statusText == 'OK') {
 
-          delete response.data.password;
-          delete response.data.image_url;
-          dispatch(setUser(response.data))
+          dispatch(setUser(response.data.user));
 
-          dispatch(setNotificationMessage('you logged in'));
-          setTimeout(() => { dispatch(setNotificationMessage(null)) },2000)
+          dispatch(setNotificationMessage(`Welcome ${response.data.user.user_name}`));
+          setTimeout(() => { dispatch(setNotificationMessage(null)) },2000);
 
-          localStorage.setItem('user', JSON.stringify(response.data))
+          localStorage.setItem('jwtToken', response.data.accessToken);
         }
       })
       .catch((err) => {

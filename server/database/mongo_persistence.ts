@@ -13,14 +13,16 @@ class MongoPersistence {
 
   // returns all titles - 1
   async getTitleList() : Promise<string[]> {
-
-    let titleList = await Title.find({});
-    return titleList.map((el : ITitle) => el.title).sort()
+    
+    let titleList = await Title.find();
+    let result = titleList.map((el : ITitle) => el.title).sort()
+    return result;
   }
   // validate title - 2
   async validateTitle(title : string) : Promise<boolean> {
       
     const valid = await Title.findOne({ title : title });
+    // console.log('valid : ', valid)
     return valid ? true : false;
   }
   // returns title - 3
@@ -31,6 +33,7 @@ class MongoPersistence {
   }
   // returns specific user's titles - 4
   async getTitles(username : string) {
+
     let userId = await this.getUserId(username);
     let newUserId = new ObjectId(userId);
     let result = await Title.find({ user_id: newUserId })
@@ -104,11 +107,38 @@ class MongoPersistence {
   async getUserInfoByName(username : string) {
     return await User.findOne({user_name : username})
   }
+  // returns user info by name-14
+  async getUserInfoByToken(refreshToken : string) {
+    return await User.findOne({refreshToken})
+  }
+  // update user info
+  async updateUser(user_name : string, refreshToken : string) {
+    return await User.updateOne({ user_name }, { $set: { refreshToken } });
+  }
   // returns user info by id-15
   async getUserInfoById(id : string) {
 
-    let newUserId = new ObjectId(id);
-    return await User.findOne({_id : newUserId})
+    let newUserId1 = new ObjectId(id.toString());
+    let newUserId2 = new ObjectId(id);
+    let newUserId3 = new ObjectId("64eb855820cb38855bd668c9");
+
+    console.log("newUserId1 : ", newUserId1);
+    console.log("newUserId2 : ", newUserId2);
+    console.log("newUserId3 : ", newUserId3);
+
+    let result = await User.findOne({_id : id});
+    let result1 = await User.findOne({_id : newUserId1});
+    let result2 = await User.findOne({_id : newUserId2});
+    let result3 = await User.findOne({user_name : "Emily Davis"});
+    let result4 = await User.findOne({_id : newUserId3});
+
+    console.log('result : ', result);
+    console.log('result1 : ', result1);
+    console.log('result2 : ', result2);
+    console.log('result3 : ', result3);
+    console.log('result4 : ', result4);
+
+    return result;
   }
   // returns all usernames-16
   async getUserNames() {
@@ -135,9 +165,7 @@ class MongoPersistence {
       password: hashedPassword,
     });
   
-    // Save the new title to the database
-    let result = await newUser.save();
-    return result ? true : false
+    return await newUser.save();
   }
   // Edit user name - 20
   async editUserName(newName : string, oldName : string) {
@@ -215,28 +243,10 @@ class MongoPersistence {
   // return entries and users name who wrote content[will be deprecated dont use]
   async getEntries(title : string) {
 
-    let id = await this.getTitleId(title);
-    let titleId = new ObjectId(id.toString());
+    let titleId = await this.getTitleId(title);
+    let entries = await Entry.find({title_id : titleId});
 
-    let entries = (await Entry.find({title_id : titleId}))
-    let result = [];
-
-    for (let entry of entries) {
-
-      delete entry.title_id;
-      entry.title = title;
-      let user = await this.getUserInfoById(entry.user_id.toString())
-
-      result.push({
-        entry : entry.entry,
-        user_id : entry.user_id,
-        title_id : entry.title_id,
-        title : title,
-        user_name : user.user_name,
-        image_url : user.image_url,
-      });
-    }
-    return result;
+    return entries
   }
   // Returns user's all entries - 28
   async getMyEntries(username : string) {
@@ -275,3 +285,4 @@ class MongoPersistence {
 
 
 export { MongoPersistence };
+

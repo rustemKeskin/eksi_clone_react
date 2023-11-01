@@ -1,4 +1,4 @@
-const app = require('./app');
+import { app } from "./app";
 const config = require('./config/config');
 
 const host = config.HOST as string;
@@ -11,3 +11,4 @@ const node_env = config.NODE_ENV as string;
 app.listen(port, host,()=> {
   console.log(`[Server]: I am running at ${host} ${port} in ${node_env}`);
 });
+
